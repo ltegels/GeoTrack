@@ -1,0 +1,17 @@
+<resources>
+
+    <string name="app_name">GeoTrack2</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">Main</string>
+    <string name="title_activity_map">Map</string>
+    <string name="btnMaps">To Mapview</string>
+    <string name="btnList">To Listview</string>
+    <string name="back">Back</string>
+    <string name="LatitudeText">unknown</string>
+    <string name="LongitudeText">unknown</string>
+    <string name="DateText">unknown date</string>
+    <string name="latitudemapstext">unknown</string>
+    <string name="no_items">No points to display</string>
+
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+       <com.google.android.maps.MapView 
+        android:apiKey="0E1onVsm5dJ5YMrSsNv7NGr-crMuJFAicZVuVhA"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:clickable="true"
+        android:id ="@+id/mapview" />
+
+       <TextView
+           android:id="@+id/latitudeMap"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="@string/latitudemapstext"
+           android:textSize="10dip" ></TextView>
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/back"/>
+
+</LinearLayout>

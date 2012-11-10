@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+   <Button android:id="@+id/toMaps"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/btnMaps"
+       android:layout_centerHorizontal="true" />
+   
+   <Button android:id="@+id/toList"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/btnList"
+       android:layout_below="@+id/toMaps"
+       android:layout_centerHorizontal="true" />
+       
+
+   <TextView
+       android:id="@+id/ValueLatitude"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/ValueLongitude"
+       android:layout_centerHorizontal="true"
+       android:text="@string/LatitudeText"
+       android:textSize="10dip"> </TextView>
+   
+   <TextView
+       android:id="@+id/ValueLongitude"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/toList"
+       android:layout_centerHorizontal="true"
+       android:text="@string/LongitudeText"
+       android:textSize="10dip"> </TextView>
+   
+   <TextView
+       android:id="@+id/date"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/ValueLatitude"
+       android:layout_centerHorizontal="true"
+       android:text="@string/DateText"
+       android:textSize="10dip"></TextView>
+
+</RelativeLayout>
