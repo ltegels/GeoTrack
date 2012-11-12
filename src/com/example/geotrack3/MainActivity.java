@@ -19,28 +19,16 @@ public class MainActivity extends Activity {
 	private TextView latitudeField; //Defines the fields to display the current longitude and latitude
 	private TextView longitudeField;
 	private TextView dateField;
-	static public ArrayList<Double> longitudeArray = new ArrayList<Double>();
-	static public ArrayList<Double> latitudeArray = new ArrayList<Double>();
-	static public ArrayList<Date> dateArray = new ArrayList<Date>();
 	static public ArrayList<Locations> locationArray= new ArrayList<Locations>();
-	
-	
-	
-	
-	
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        latitudeField =(TextView) findViewById(R.id.ValueLatitude);
+        latitudeField =(TextView) findViewById(R.id.ValueLatitude); //Creating the field to display the current location
         longitudeField = (TextView) findViewById(R.id.ValueLongitude);
         dateField = (TextView) findViewById(R.id.date);
-        
-        
-        
-        
         
         Button toMaps = (Button) findViewById(R.id.toMaps); //Creating the button to enter the mapview
         Button toList = (Button) findViewById(R.id.toList); //Creating the button to the listview
@@ -64,12 +52,7 @@ public class MainActivity extends Activity {
 				
 			}
 		});
-        
-     
-        
-        
-        
-        
+    
     }
     @Override
     public void onResume() {
@@ -99,8 +82,9 @@ public class MainActivity extends Activity {
         criteria.setPowerRequirement(Criteria.POWER_HIGH);
         String provider = mLocationManager.getBestProvider(criteria, false);
         
-        mLocationManager.requestLocationUpdates(provider, 15000, 50,
-                mLocationListener);
+        mLocationManager.requestLocationUpdates(provider, 0, 0,
+                mLocationListener); //For easier testing put the values to 0 and 0 instead of 15000 and 50
+        
         
     }
   
@@ -129,26 +113,18 @@ public class MainActivity extends Activity {
            double lng = (double) (location.getLongitude());
            Date time = new Date();
            
-           Locations loc = new Locations();
+           Locations loc = new Locations(); //Makes a location and adds it to our location array
            loc.setLocationDate(time);
            loc.setLocationLat(lat);
            loc.setLocationLong(lng);
            locationArray.add(loc);
-           
-           
-           
-           
-           
-           
+
            longitudeField.setText(String.valueOf(lng));
            latitudeField.setText(String.valueOf(lat));
            dateField.setText(String.valueOf(time));
            
            
-           longitudeArray.add(lng); //Add the information about this location to a list
-           latitudeArray.add(lat);
-           dateArray.add(time);
-           
+         
        	
        }
    };

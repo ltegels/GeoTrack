@@ -3,6 +3,7 @@ package com.example.geotrack3;
 import android.app.ListActivity;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import java.util.ArrayList;
 
@@ -14,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.ListView;
 
 
 
@@ -53,6 +55,18 @@ public class LocationList extends ListActivity {
 		thread.start();
 		mProgressDialog = ProgressDialog.show(LocationList.this, "Please wait...", "Retrieving data...", true); //Defines the loadingscreen 
 	
+	}
+	
+	@Override
+	protected void onListItemClick(ListView l, View v, int position, long id)
+	{
+		Map.currentLoc = (Locations) l.getItemAtPosition(position);
+		
+		Intent maps = new Intent(getApplicationContext(), Map.class);
+		maps.putExtra("value1", "this value 1");
+		
+		this.finish();
+		startActivity(maps);
 	}
 	
 	private void getOrders(){

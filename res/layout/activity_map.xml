@@ -10,18 +10,20 @@
         android:layout_height="200dp"
         android:clickable="true"
         android:id ="@+id/mapview" />
+      
 
-       <TextView
-           android:id="@+id/latitudeMap"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:text="@string/latitudemapstext"
-           android:textSize="10dip" ></TextView>
+    <Button
+        android:id="@+id/showAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/showAll" />
 
     <Button
         android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/back"/>
+        android:layout_gravity="center"
+        android:text="@string/back" />
 
 </LinearLayout>

@@ -13,5 +13,6 @@
     <string name="DateText">unknown date</string>
     <string name="latitudemapstext">unknown</string>
     <string name="no_items">No points to display</string>
+    <string name="showAll">Show all locations</string>
 
 </resources>
